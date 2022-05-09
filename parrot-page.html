@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="marquee">
+        <div id="track" class="track">
+        <div id="content" class="content">
+            <span id="marquee1" class="inner">✨Find your animal friend and move forward✨</span>
+            <span id="marquee2" class="inner">✨Find your animal friend and move forward✨</span>
+            <span id="marquee3" class="inner">✨Find your animal friend and move forward✨</span>
+            <span id="marquee4" class="inner">✨Find your animal friend and move forward✨</span>
+            <span id="marquee5" class="inner">✨Find your animal friend and move forward✨</span>
+            <span id="marquee6" class="inner">✨Find your animal friend and move forward✨</span>
+        </div></div></div>
+    
+
+    
+    <div class="container" id="main">
+    <div id="myBtn" onclick="renderModal(this,10,50)"><img id="blue" src="output-onlinegiftools.gif"></div>
+    <!-- The Modal -->
+        
+
+    <div id="myBtn" onclick="renderModal(this,30,60)"><img class="position" src="output-onlinegiftools2.gif"></div>
+
+    <!--
+        <div id="myModal" class="modal2">
+          
+        <div class="modal-content2">
+            <img class="popup2" src="Rocks.png">
+        </div>    
+    </div>
+    -->
+
+
+    
+    <div class="question">
+
+    <div id="myBtn" onclick="renderModal(this,10,50)"><img class="yellow2" src="output-onlinegiftools2.gif">
+    <div id="myBtn" onclick="renderModal(this,10,50)"><img class="blue2" src="output-onlinegiftools.gif">
+    <div id="myBtn" onclick="renderModal(this,10,50)"><img class="yellow3" src="output-onlinegiftools2.gif"></div>
+    
+
+    <div id="text-box">
+
+    <div class="bird1"><img class="location" src="flying.png"></div>
+    <div class="bird2"><img class="location2" src="flying2.png"></div>
+    <div id="qbox"><img class="qbox" src="output-onlinegiftools.gif"></div>
+    <div id="money" class="money">
+        <img class="lc1" src="money.png">
+        <img class="lc2" src="money.png">
+        <img class="lc3" src="money.png">
+        <img class="lc4" src="money.png">
+        <img class="lc5" src="money.png"></div>
+    </div>
+
+    <a href="https://www.hindustantimes.com/travel/how-parakeets-are-creating-trouble-in-the-netherlands/story-5DiZ0sbJiNGOvpDPJrVGCN.html"><img class="letter" src="loveletter.png"></a>
+
+    <a href="index.html"><img class="back" src="left.png"></a>
+
+    <script>
+
+        function randomIntFromInterval(min, max) { // min and max included 
+
+            if (min < 0) {
+                console.log("NO WTF!");
+                return;
+            }
+            else { 
+                if (min > max) {
+                console.log("NO WTF!");
+                return;
+                }
+            }
+        
+            
+
+        var percentage = Math.floor(Math.random() * (max - min + 1) + min)
+        return percentage.toString() + "%"
+        }
+
+        function renderModal(element,min,max) {
+
+        var modal_content = document.createElement("div");
+        modal_content.setAttribute("class","moving");
+        
+        var rect = element.firstElementChild.getBoundingClientRect();
+        console.log(rect.top, rect.right, rect.bottom, rect.left);
+
+        var img_content = document.createElement("img");
+        img_content.setAttribute("src","Rocks.png");
+        img_content.setAttribute("class", "popup");
+        img_content.style.width = randomIntFromInterval(min,max);
+
+        modal_content.appendChild(img_content);
+
+        //document.getElementById("text-box").appendChild(modal_content);
+        var textbox = document.getElementById("text-box")
+        textbox.insertBefore(modal_content, textbox.childNodes[0]);
+
+        console.log("printed one element");
+
+        }
+
+        const qbox = document.getElementById("qbox");
+        const money = document.getElementById("money");
+        const span1 = document.getElementById("marquee1");
+        const span2 = document.getElementById("marquee2");
+        const span3 = document.getElementById("marquee3");
+        const span4 = document.getElementById("marquee4");
+        const span5 = document.getElementById("marquee5");
+        const span6 = document.getElementById("marquee6");
+        const track = document.getElementById("track");
+        const content = document.getElementById("content");
+        const back = document.querySelector("body");
+
+
+        function controlClickMoney() {
+            console.log("hey");
+            money.style.display = "inline-block";
+            span1.innerText = "🤑In Amsterdam, where one of the largest colonies of parakeet lives, the town hall put 70 euros of fine for feeding them in certain areas"
+            span2.innerText = "🤑In Amsterdam, where one of the largest colonies of parakeet lives, the town hall put 70 euros of fine for feeding them in certain areas"
+            span3.innerText = "🤑In Amsterdam, where one of the largest colonies of parakeet lives, the town hall put 70 euros of fine for feeding them in certain areas"
+            span4.innerText = "🤑In Amsterdam, where one of the largest colonies of parakeet lives, the town hall put 70 euros of fine for feeding them in certain areas"
+            span5.innerText = "🤑In Amsterdam, where one of the largest colonies of parakeet lives, the town hall put 70 euros of fine for feeding them in certain areas"
+            span6.innerText = "🤑In Amsterdam, where one of the largest colonies of parakeet lives, the town hall put 70 euros of fine for feeding them in certain areas"
+            content.style.backgroundColor = "red";
+            back.style.backgroundImage = "none";
+            back.style.backgroundColor = "black";
+
+        }
+
+
+
+        qbox.addEventListener("click", controlClickMoney);
+
+
+
+
+
+
+    </script>
+</body>
+</html>

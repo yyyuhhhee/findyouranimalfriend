@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find your animal friend and move on</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+    <div class="marquee">
+        <div id="track" class="track"><div class="content">
+        <span id="marquee" class="inner">✨Find your animal friend and move forward✨</span>
+        <span id="marquee2" class="inner">✨Find your animal friend and move forward✨</span>
+        <span id="marquee3" class="inner">✨Find your animal friend and move forward✨</span>
+        <span id="marquee4" class="inner">✨Find your animal friend and move forward✨</span>
+        <span id="marquee5" class="inner">✨Find your animal friend and move forward✨</span>
+    </div></div></div>
+    <div class="animals">
+        <div class="container" id="pig"><a href="piggygrid.html"><img class="pig" src="pig-face.png"></a></div>
+        <div class="container" id="bear"><a href="bear-page.html"><img class="bear" src="bear.png"></a></div>
+        <div class="container" id="rabbit"><a href="bunny.html"><img class="rabbit" src="rabbit-face.png"></a></div>
+        <div class="container" id="chicken"><a href="chicken.html"><img class="chicken" src="chicken.png"></a></div>
+        <div class="container" id="horse"><a href="horse-page.html"><img class="horse" src="horse-face.png"></a></div>
+        <di class="container" id="parrot"><a href="parrot-page.html"><img class="parrot" src="parrot.png"></a></div>
+    </div>
+</body>
+</html>
+
+<style>
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        cursor: url('cursorthinking.png'), auto;
+        background: url(stock-photo-field-of-spring-flowers-and-perfect-sky-96902962.jpeg) no-repeat center center fixed; 
+        background-size: cover;
+        transition: 1s;
+    }
+
+
+    .content {
+        letter-spacing: -5px;
+        transform:scale(1,2.5) translateY(6vh); 
+        margin-left: 0;
+        margin-top: 0;
+        background-color: white;
+        height: 24vh;
+        font-family: 'Archivo Narrow', sans-serif;
+        font-stretch: condensed;
+        font-size: 13vh;
+    }
+
+
+    .marquee {
+        position: relative;
+        width: 100vw;
+        max-width: 100%;
+        height: 23vh;
+        margin-top: 0;
+        overflow-x: hidden; 
+    }
+
+    .inner {
+        margin-left: 20vw;
+    }
+
+    .track {
+        position: absolute;
+        white-space: nowrap;
+        will-change: transform;
+        animation: marquee 37s linear infinite;
+    }
+
+    @keyframes marquee {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+    }
+
+    .shine {
+        animation: shine 0.2s linear infinite;
+        margin-left: -13vw;
+    }
+
+    @keyframes shine {
+        from { color: red; }
+        to { color: white; }
+    }
+
+    
+
+    img {
+        width: 7vw;
+        transition: 0.5s linear;
+    }
+
+    img:hover {
+        cursor: url('starcursor.png'), auto;
+    }
+
+    .sparkle {
+        position: fixed;
+        width: 4vw;
+    }
+
+    .animals {
+        margin-top: 10vh;
+       /* display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 30vh 30vh;*/
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+    }
+
+    .container {
+        display: inline-block;
+        text-align: center;
+        align-items: center;
+    }
+
+    .cont-animation {
+        animation: popping 0.5s linear infinite;
+    }
+
+    @keyframes popping {
+        0% {transform: translateY(0vh);}
+        50% {transform: translateY(-5vh);}
+        100% {transform: translateY(0vh);}
+    }
+
+    .pig{
+        position: fixed;
+        margin-left: 30vw;
+        animation: pigfloating 20s linear infinite;
+    }
+    .pig:hover{
+        animation-play-state: paused;
+    }
+
+    @keyframes pigfloating {
+        0% {transform: translateY(0vh) translateX(0vw);}
+        50% {transform: translateY(50vh) translateX(30vw);}
+        100% {transform: translateY(0vh) translateX(0vw);}
+    }
+
+    .bear{
+        position: fixed;
+        margin-left: 10vw;
+        margin-top: 5vw;
+        animation: bearfloating 20s linear infinite;
+    }
+    .bear:hover{
+        animation-play-state: paused;
+    }
+  
+    @keyframes bearfloating {
+        0% {transform: translateY(0vh) translateX(0vw);}
+        50% {transform: translateY(-30vh) translateX(30vw);}
+        100% {transform: translateY(0vh) translateX(0vw);}
+    }
+
+
+    .rabbit{
+        position: fixed;
+        margin-left: 60vw;
+        margin-top: -10vh;
+        animation: rabbitfloating 20s linear infinite;
+    }
+
+    .rabbit:hover{
+        animation-play-state: paused;
+    }
+  
+    @keyframes rabbitfloating {
+        0% {transform: translateY(0vh) translateX(0vw);}
+        50% {transform: translateY(0vh) translateX(40vw);}
+        100% {transform: translateY(0vh) translateX(0vw);}
+    }
+
+    .parrot{
+        position: fixed;
+        margin-left: 40vw;
+        margin-top: 45vh;
+        animation: parrotfloating 20s linear infinite;
+    }
+
+      
+    @keyframes parrotfloating {
+        0% {transform: translateY(0vh) translateX(0vw);}
+        50% {transform: translateY(-40vh) translateX(0vw);}
+        100% {transform: translateY(0vh) translateX(0vw);}
+    }
+
+    .parrot:hover{
+        animation-play-state: paused;
+    }
+  
+    @keyframes rabbitfloating {
+        0% {transform: translateY(0vh) translateX(0vw);}
+        50% {transform: translateY(0vh) translateX(30vw);}
+        100% {transform: translateY(0vh) translateX(0vw);}
+    }
+
+    .horse{
+        position: fixed;
+        margin-left: 65vw;
+        margin-top: 50vh;
+        animation: horsefloating 20s linear infinite;
+    }
+
+    .horse:hover{
+        animation-play-state: paused;
+    }
+  
+    @keyframes horsefloating {
+        0% {transform: translateY(0vh) translateX(0vw);}
+        50% {transform: translateY(-30vh) translateX(20vw);}
+        100% {transform: translateY(0vh) translateX(0vw);}
+    }
+
+    .chicken{
+        position: fixed;
+        margin-left: 5vw;
+        margin-top: 45vh;
+        margin-top: 50vh;
+        animation: chickenloating 20s linear infinite;
+    }
+
+    .chicken:hover{
+        animation-play-state: paused;
+    }
+
+    @keyframes chickenloating {
+        0% {transform: translateY(0vh) translateX(0vw);}
+        50% {transform: translateY(-25vh) translateX(30vw);}
+        100% {transform: translateY(0vh) translateX(0vw);}
+    }
+
+
+    .sparkle {
+    position: fixed;
+    z-index: 6;
+    opacity: 0.5;
+    pointer-events: none;
+    }
+
+    @keyframes colorchange {
+        0% {background-color: red;}
+        50% {background-color: black;}}
+        100% {background-color: red;}}
+    }
+
+    
+
+</style>
+
+<script>
+    const pig = document.getElementById("pig");
+    const rabbit = document.getElementById("rabbit");
+    const dog = document.getElementById("dog");
+    const horse = document.getElementById("horse");
+    const cat = document.getElementById("cat");
+    const parrot = document.getElementById("parrot");
+    const chicken = document.getElementById("chicken");
+    const marquee = document.getElementById("marquee");
+    const marquee2 = document.getElementById("marquee2");
+    const change = document.getElementsByClassName("marquee");
+    const track = document.getElementById("track");
+    const whole = document.getElementsByClassName("marquee");
+    const shine = document.getElementsByClassName("shine");
+    const container = document.getElementsByClassName("container");
+    const back = document.querySelector("body");
+
+
+
+
+
+
+    function hoverpig() {
+        marquee.innerText = "✨Be a friend with a piggy✨";
+        marquee2.innerText = "✨Be a friend with a piggy✨";
+        marquee3.innerText = "✨Be a friend with a piggy✨";
+        marquee4.innerText = "✨Be a friend with a piggy✨";
+        marquee5.innerText = "✨Be a friend with a piggy✨";
+        track.classList.remove("track");
+        track.classList.add("shine");
+        pig.classList.add("cont-animation");
+        back.style.backgroundImage = "none";
+        back.style.backgroundColor = "red";
+        back.style.webkitAnimationName = "colorchange";
+        back.style.animationDuration = "1.5s";
+        back.style.animationIterationCount = "infinite";
+    }
+
+    function out() {
+        marquee.innerText = "✨Find your animal friend and move forward✨";
+        marquee2.innerText = "✨Find your animal friend and move forward✨";
+        marquee3.innerText = "✨Find your animal friend and move forward✨";
+        marquee4.innerText = "✨Find your animal friend and move forward✨";
+        marquee5.innerText = "✨Find your animal friend and move forward✨";
+        track.classList.add("track");
+        track.classList.remove("shine");
+        pig.classList.remove("cont-animation");
+        back.style.backgroundColor = "none";
+        back.style.backgroundImage = "url('stock-photo-field-of-spring-flowers-and-perfect-sky-96902962.jpeg')";
+
+    }
+
+
+
+    pig.addEventListener("mouseover", hoverpig);
+    pig.addEventListener("mouseout", out);
+
+
+    function hoverbear() {
+        marquee.innerText = "✨Be a friend with a bear✨";
+        marquee2.innerText = "✨Be a friend with a bear✨";
+        marquee3.innerText = "✨Be a friend with a bear✨";
+        marquee4.innerText = "✨Be a friend with a bear✨";
+        marquee5.innerText = "✨Be a friend with a bear✨";
+        track.classList.remove("track");
+        track.classList.add("shine");
+        bear.classList.add("cont-animation");
+        back.style.backgroundImage = "none";
+        back.style.backgroundColor = "red";
+        back.style.webkitAnimationName = "colorchange";
+        back.style.animationDuration = "1.5s";
+        back.style.animationIterationCount = "infinite";
+    }
+
+    function bearout() {
+        marquee.innerText = "✨Find your animal friend and move forward✨";
+        marquee2.innerText = "✨Find your animal friend and move forward✨";
+        marquee3.innerText = "✨Find your animal friend and move forward✨";
+        marquee4.innerText = "✨Find your animal friend and move forward✨";
+        marquee5.innerText = "✨Find your animal friend and move forward✨";
+        track.classList.add("track");
+        track.classList.remove("shine");
+        bear.classList.remove("cont-animation");
+        back.style.backgroundColor = "none";
+        back.style.backgroundImage = "url('stock-photo-field-of-spring-flowers-and-perfect-sky-96902962.jpeg')";
+
+    }
+
+
+
+    bear.addEventListener("mouseover", hoverbear);
+    bear.addEventListener("mouseout", bearout);
+
+
+
+
+    
+    function hoverrabbit() {
+        marquee.innerText = "✨Be a friend with a rabbit✨";
+        marquee2.innerText = "✨Be a friend with a rabbit✨";
+        marquee3.innerText = "✨Be a friend with a rabbit✨";
+        marquee4.innerText = "✨Be a friend with a rabbit✨";
+        marquee5.innerText = "✨Be a friend with a rabbit✨";
+        track.classList.remove("track");
+        track.classList.add("shine");
+        rabbit.classList.add("cont-animation");
+        back.style.backgroundImage = "none";
+        back.style.backgroundColor = "red";
+        back.style.webkitAnimationName = "colorchange";
+        back.style.animationDuration = "1.5s";
+        back.style.animationIterationCount = "infinite";
+    }
+
+    function rabbitout() {
+        marquee.innerText = "✨Find your animal friend and move forward✨";
+        marquee2.innerText = "✨Find your animal friend and move forward✨";
+        marquee3.innerText = "✨Find your animal friend and move forward✨";
+        marquee4.innerText = "✨Find your animal friend and move forward✨";
+        marquee5.innerText = "✨Find your animal friend and move forward✨";
+        track.classList.add("track");
+        track.classList.remove("shine");
+        rabbit.classList.remove("cont-animation");
+        back.style.backgroundColor = "none";
+        back.style.backgroundImage = "url('stock-photo-field-of-spring-flowers-and-perfect-sky-96902962.jpeg')";
+
+    }
+
+
+
+    rabbit.addEventListener("mouseover", hoverrabbit);
+    rabbit.addEventListener("mouseout", rabbitout);
+
+
+
+
+
+
+
+
+    
+    function hoverhorse() {
+        marquee.innerText = "✨Be a friend with a horse✨";
+        marquee2.innerText = "✨Be a friend with a horse✨";
+        marquee3.innerText = "✨Be a friend with a horse✨";
+        marquee4.innerText = "✨Be a friend with a horse✨";
+        marquee5.innerText = "✨Be a friend with a horse✨";
+        track.classList.remove("track");
+        track.classList.add("shine");
+        horse.classList.add("cont-animation");
+        back.style.backgroundImage = "none";
+        back.style.backgroundImage = "none";
+        back.style.backgroundColor = "red";
+        back.style.webkitAnimationName = "colorchange";
+        back.style.animationDuration = "1.5s";
+        back.style.animationIterationCount = "infinite";
+    }
+
+    function horseout() {
+        marquee.innerText = "✨Find your animal friend and move forward✨";
+        marquee2.innerText = "✨Find your animal friend and move forward✨";
+        marquee3.innerText = "✨Find your animal friend and move forward✨";
+        marquee4.innerText = "✨Find your animal friend and move forward✨";
+        marquee5.innerText = "✨Find your animal friend and move forward✨";
+        track.classList.add("track");
+        track.classList.remove("shine");
+        horse.classList.remove("cont-animation");
+        back.style.backgroundColor = "none";
+        back.style.backgroundImage = "url('stock-photo-field-of-spring-flowers-and-perfect-sky-96902962.jpeg')";
+
+    }
+
+
+
+    horse.addEventListener("mouseover", hoverhorse);
+    horse.addEventListener("mouseout", horseout);
+
+
+
+
+    
+    function hoverparrot() {
+        marquee.innerText = "✨Be a friend with a parrot✨";
+        marquee2.innerText = "✨Be a friend with a parrot✨";
+        marquee3.innerText = "✨Be a friend with a parrot✨";
+        marquee4.innerText = "✨Be a friend with a parrot✨";
+        marquee5.innerText = "✨Be a friend with a parrot✨";
+        track.classList.remove("track");
+        track.classList.add("shine");
+        parrot.classList.add("cont-animation");
+        back.style.backgroundImage = "none";
+        back.style.backgroundColor = "red";
+        back.style.webkitAnimationName = "colorchange";
+        back.style.animationDuration = "1.5s";
+        back.style.animationIterationCount = "infinite";
+    }
+
+    function parrotout() {
+        marquee.innerText = "✨Find your animal friend and move forward✨";
+        marquee2.innerText = "✨Find your animal friend and move forward✨";
+        marquee3.innerText = "✨Find your animal friend and move forward✨";
+        marquee4.innerText = "✨Find your animal friend and move forward✨";
+        marquee5.innerText = "✨Find your animal friend and move forward✨";
+        track.classList.add("track");
+        track.classList.remove("shine");
+        parrot.classList.remove("cont-animation");
+        back.style.backgroundColor = "none";
+        back.style.backgroundImage = "url('stock-photo-field-of-spring-flowers-and-perfect-sky-96902962.jpeg')";
+
+    }
+
+
+
+    parrot.addEventListener("mouseover", hoverparrot);
+    parrot.addEventListener("mouseout", parrotout);
+
+
+    function hoverchicken() {
+        marquee.innerText = "✨Be a friend with a chicken✨";
+        marquee2.innerText = "✨Be a friend with a chicken✨";
+        marquee3.innerText = "✨Be a friend with a chicken✨";
+        marquee4.innerText = "✨Be a friend with a chicken✨";
+        marquee5.innerText = "✨Be a friend with a chicken✨";
+        track.classList.remove("track");
+        track.classList.add("shine");
+        chicken.classList.add("cont-animation");
+        back.style.backgroundImage = "none";
+        back.style.backgroundColor = "red";
+        back.style.webkitAnimationName = "colorchange";
+        back.style.animationDuration = "1.5s";
+        back.style.animationIterationCount = "infinite";
+    }
+
+    function chickenout() {
+        marquee.innerText = "✨Find your animal friend and move forward✨";
+        marquee2.innerText = "✨Find your animal friend and move forward✨";
+        marquee3.innerText = "✨Find your animal friend and move forward✨";
+        marquee4.innerText = "✨Find your animal friend and move forward✨";
+        marquee5.innerText = "✨Find your animal friend and move forward✨";
+        track.classList.add("track");
+        track.classList.remove("shine");
+        chicken.classList.remove("cont-animation");
+        back.style.backgroundColor = "none";
+        back.style.backgroundImage = "url('stock-photo-field-of-spring-flowers-and-perfect-sky-96902962.jpeg')";
+
+    }
+
+
+
+    chicken.addEventListener("mouseover", hoverchicken);
+    chicken.addEventListener("mouseout", chickenout);
+
+
+
+
+
+  /*  function hoverdog() {
+        marquee.innerText = "✨Be a friend with a dog✨";
+        marquee2.innerText = "✨Be a friend with a dog✨";
+        marquee3.innerText = "✨Be a friend with a dog✨";
+        marquee4.innerText = "✨Be a friend with a dog✨";
+        marquee5.innerText = "✨Be a friend with a dog✨";
+        track.classList.remove("track");
+        track.classList.add("shine");
+        dog.classList.add("cont-animation");
+    }
+
+    function dogout() {
+        marquee.innerText = "✨Find your animal friend and move forward✨";
+        marquee2.innerText = "✨Find your animal friend and move forward✨";
+        marquee3.innerText = "✨Find your animal friend and move forward✨";
+        marquee4.innerText = "✨Find your animal friend and move forward✨";
+        marquee5.innerText = "✨Find your animal friend and move forward✨";
+        track.classList.add("track");
+        track.classList.remove("shine");
+        dog.classList.remove("cont-animation");
+
+    }
+
+
+
+    dog.addEventListener("mouseover", hoverdog);
+    dog.addEventListener("mouseout", dogout);
+
+
+    
+*/
+
+
+
+
+</script> 

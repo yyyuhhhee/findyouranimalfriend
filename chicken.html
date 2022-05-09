@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Image Trail Effects | Demo 1 | Codrops</title>
+		<meta name="description" content="A set of fun effects for mouse-following image trails." />
+		<meta name="keywords" content="image trail, effect, web design, mouse, javascript, gsap" />
+		<meta name="author" content="Codrops" />
+		<link rel="stylesheet" href="reset.css">
+
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script></head>
+	<body class="demo-1 loading">
+
+		<div class="wrapper">
+	
+			<div id="bg" class="bg"></div>
+			<div class="marquee">
+				<div id="track" class="track">
+				<div id="content" class="content">
+					<span id="marquee1" class="inner">✨Find your animal friend and move forward✨</span>
+					<span id="marquee2" class="inner">✨Find your animal friend and move forward✨</span>
+					<span id="marquee3" class="inner">✨Find your animal friend and move forward✨</span>
+					<span id="marquee4" class="inner">✨Find your animal friend and move forward✨</span>
+					<span id="marquee5" class="inner">✨Find your animal friend and move forward✨</span>
+					<span id="marquee6" class="inner">✨Find your animal friend and move forward✨</span>
+				</div></div></div>
+
+				<a href="index.html"><img class="back" src="left.png"></a>
+				<a href="https://www.ciwf.org.uk/farm-animals/chickens/meat-chickens/"><img class="letter" id="letter" src="loveletter.png"></a>
+
+				<div class="rooster">
+					<img class="rooster1" src="rr.png">
+					<img class="rooster2" src="rr.png">
+					<img class="rooster3" src="rr.png">
+					<img class="rooster4" src="rr.png">
+					<img class="rooster5" src="rr.png">
+					<img class="rooster6" src="rr.png">
+					<img class="rooster7" src="rr.png">
+				</div>
+
+			<img id="qbox" class="qbox" src="output-onlinegiftools.gif"></div>
+			<img src="letter.png">
+
+		<script>
+			var img = new Image;
+			const qbox = document.getElementById("qbox");
+			img.src = 'https://major-chicken.de/media/a3/fd/76/1611667472/majorchicken1.png';
+			const back = document.querySelector("body");
+
+	        const span1 = document.getElementById("marquee1");
+   		    const span2 = document.getElementById("marquee2");
+        	const span3 = document.getElementById("marquee3");
+        	const span4 = document.getElementById("marquee4");
+        	const span5 = document.getElementById("marquee5");
+        	const span6 = document.getElementById("marquee6");
+			const span7 = document.getElementById("marquee7");
+			const span8 = document.getElementById("marquee8");
+			const span9 = document.getElementById("marquee9");
+			const span10 = document.getElementById("marquee10");
+        	const track = document.getElementById("track");
+        	const content = document.getElementById("content");
+			const marquee = document.getElementById("marquee");
+
+
+
+
+			function startrow() {
+
+
+			document.addEventListener('mousemove', function(e) {
+    		e = e || window.event;
+   			var tag = document.createElement('img');
+    		console.log(e);
+    		tag.src = img.src;
+    		tag.style.position = 'absolute';
+    		tag.style.height = '150px';
+    		tag.style.width = '150px';
+    		tag.style.top = (e.pageY || e.clientY) + 'px';
+    		tag.style.left = (e.pageX || e.clientX) + 'px';
+    		this.body.appendChild(tag);
+			back.style.backgroundImage = "none";
+			back.style.backgroundColor = "black";
+
+			console.log("hey");
+            span1.innerText = " 🐓In intensive chicken farms all three of these are compromised by overcrowding in filthy conditions, barren environments, and rapid growth. Chickens also suffer injury and stress through rough handling during catching, transport and slaughter."
+            span2.innerText = " 🐓In intensive chicken farms all three of these are compromised by overcrowding in filthy conditions, barren environments, and rapid growth. Chickens also suffer injury and stress through rough handling during catching, transport and slaughter."
+            span3.innerText = " 🐓In intensive chicken farms all three of these are compromised by overcrowding in filthy conditions, barren environments, and rapid growth. Chickens also suffer injury and stress through rough handling during catching, transport and slaughter."
+            span4.innerText = " 🐓In intensive chicken farms all three of these are compromised by overcrowding in filthy conditions, barren environments, and rapid growth. Chickens also suffer injury and stress through rough handling during catching, transport and slaughter."
+            span5.innerText = " 🐓In intensive chicken farms all three of these are compromised by overcrowding in filthy conditions, barren environments, and rapid growth. Chickens also suffer injury and stress through rough handling during catching, transport and slaughter."
+            span6.innerText = " 🐓In intensive chicken farms all three of these are compromised by overcrowding in filthy conditions, barren environments, and rapid growth. Chickens also suffer injury and stress through rough handling during catching, transport and slaughter."
+			span7.innerText = " 🐓In intensive chicken farms all three of these are compromised by overcrowding in filthy conditions, barren environments, and rapid growth. Chickens also suffer injury and stress through rough handling during catching, transport and slaughter."
+			span8.innerText = " 🐓In intensive chicken farms all three of these are compromised by overcrowding in filthy conditions, barren environments, and rapid growth. Chickens also suffer injury and stress through rough handling during catching, transport and slaughter."
+			span9.innerText = " 🐓In intensive chicken farms all three of these are compromised by overcrowding in filthy conditions, barren environments, and rapid growth. Chickens also suffer injury and stress through rough handling during catching, transport and slaughter."
+			span10.innerText = " 🐓In intensive chicken farms all three of these are compromised by overcrowding in filthy conditions, barren environments, and rapid growth. Chickens also suffer injury and stress through rough handling during catching, transport and slaughter."
+            content.style.backgroundColor = "yellow"
+            back.style.backgroundImage = "none";
+            back.style.backgroundColor = "black";
+			marquee.style.animationPlayState = "running";
+			marquee.style.webkitAnimationDuration = "5s";
+		}, false);
+
+
+			}
+
+
+			qbox.addEventListener("click", startrow);
+
+
+
+
+		</script>
+		
+
+	</body>
+</html>
+
+
+
+<style>
+
+	body {
+		width: 100vw;
+		height: 100vh;
+		background-image: url('grass.jpeg');
+		overflow: hidden;
+		transition: 1s;
+	}
+	.rr {
+		position: fixed;
+		margin-top: 30%;
+		margin-left: 50%;
+	}
+
+
+
+    .inner {
+        margin-left: 20vw;
+    }
+
+    @keyframes marquee {
+        from { transform: translateX(-10%); }
+        to { transform: translateX(-50%); }
+    }
+
+
+	.content {
+		top: 0;
+		left: 0;
+		transform: translateX(3vh);
+        z-index: 1;
+        margin-left: 0;
+        background-color: white;
+        height: 24vh;
+        font-family: 'Archivo Narrow', sans-serif;
+        font-stretch: condensed;
+        transform:scale(1,2.5) translateY(3.5vh); 
+        letter-spacing: -5px;
+        font-size: 13vh;
+		margin-top: 0;
+    }
+
+
+    .marquee {
+		top: 0;
+		left: 0;
+        z-index: 0;
+        position: fixed;
+        width: 100vw;
+        max-width: 100%;
+        height: 23vh;
+        margin-top: 0;
+        overflow-x: hidden;
+    }
+
+    .inner {
+        z-index: 1;
+        margin-left: 20vw;
+    }
+
+    .track {
+        z-index: 1;
+        position: absolute;
+        white-space: nowrap;
+        will-change: transform;
+        animation: marquee 37s linear infinite;
+    }
+
+
+
+	.rooster1 {
+		position: fixed;
+		display: inline-block;
+		margin-top: 30vh;
+		margin-left: 20vw;
+	}
+
+	.rooster2 {
+		position: fixed;
+		display: inline-block;
+		margin-top: 50vh;
+		margin-left: 40vw;
+	}
+
+	.rooster3 {
+		position: fixed;
+		display: inline-block;
+		margin-top: 40vh;
+		margin-left: 60vw;
+	}
+
+	.rooster4 {
+		position: fixed;
+		display: inline-block;
+		margin-top: 30vh;
+		margin-left: 80vw;
+	}
+
+	.rooster5 {
+		position: fixed;
+		display: inline-block;
+		margin-top: 80vh;
+		margin-left: 70vw;
+
+	}
+
+	.rooster6 { 
+		position: fixed;
+		display: inline-block;
+		margin-top: 80vh;
+		margin-left: 30vw;
+	}
+
+
+	.qbox {
+		margin-left: 7vw;
+		position: absolute;
+		margin-top: 60vh;
+		z-index: 1;
+		transition: 0.5s;
+		width: 10vw;
+	}
+
+	.qbox:hover {
+		width: 12vw;
+	}
+
+	.back {
+		width: 9vw;
+		position: fixed;
+		margin-top: 25vh;
+		margin-left: 5vw;
+		z-index: 4;
+		transition: 0.2s;
+	}
+
+	.back:hover {
+		width: 10vw;
+
+	}
+
+	.letter {
+		width: 8vw;
+		position: fixed;
+		margin-top: 50vh;
+		margin-left: 80vw;
+		z-index: 10;
+		transition: 0.4s;
+	}
+
+	.letter:hover {
+		width: 10vw;
+	}
+
+</style>
+

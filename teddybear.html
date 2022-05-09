@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="cell" id="cell"><img src="cell.png"></div>
+
+
+    <div class="marquee">
+    <div id="track" class="track">
+    <div class="content">
+        <span class="inner">✨Find your animal friend and move forward✨</span>
+        <span class="inner">✨Find your animal friend and move forward✨</span>
+        <span class="inner">✨Find your animal friend and move forward✨</span>
+        <span class="inner">✨Find your animal friend and move forward✨</span>
+        <span class="inner">✨Find your animal friend and move forward✨</span>
+        <span class="inner">✨Find your animal friend and move forward✨</span>
+        <span class="inner">✨Find your animal friend and move forward✨</span>
+        <span class="inner">✨Find your animal friend and move forward✨</span>
+        <span class="inner">✨Find your animal friend and move forward✨</span>
+        <span class="inner">✨Find your animal friend and move forward✨</span>
+        <span class="inner">✨Find your animal friend and move forward✨</span>
+        <span class="inner">✨Find your animal friend and move forward✨</span>
+    </div></div></div>
+
+    <div id="qbox"><img class="qbox" src="output-onlinegiftools.gif"></div>
+        
+
+    <div class="animals">
+        <img class="Bali" src="Bali_Teddy.png">
+        <img class="family" src="teddy1.png">
+        <img class="hello" src="hello.png">
+        <img class="pooh" src="winniethepooh.png">
+        <img class="buddie" src="teddy2 copy.png">
+        <img class="polarbear" src="teddy3.png">
+        <img class="shopbear" src="shopbears.jpeg">
+        <img class="lordofthering" src="lordofthering.png">
+        <a href="https://www.dailymail.co.uk/news/article-2025388/China-Tortured-mother-bear-kills-cub-herself.html"><div id="imgbox" class="caged-2"></div></a>
+        <img class="lotso" src="teddy5.png">
+        <img class="wild" src="wild-bear.jpg">
+        
+        
+    </div>
+
+
+</body>
+</html>
+
+<style>
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+    body {
+        background-color: black;
+        width: 100vw;
+        cursor: url('cursor.png'), auto;
+    }
+
+
+    .content {
+        letter-spacing: -5px;
+        transform:scale(1,2.5) translateY(6vh); 
+        margin-left: 0;
+        margin-top: 0;
+        background-color: white;
+        height: 24vh;
+        font-family: 'Archivo Narrow', sans-serif;
+        font-stretch: condensed;
+        font-size: 13vh;
+    }
+
+    .marquee {
+        position: relative;
+        width: 100vw;
+        max-width: 100%;
+        height: 23vh;
+        margin-top: 0;
+        overflow-x: hidden;
+    }
+
+    .inner {
+        margin-left: 20vw;
+    }
+
+    .track {
+        position: absolute;
+        white-space: nowrap;
+        will-change: transform;
+        animation: marquee 37s linear infinite;
+    }
+
+    @keyframes marquee {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+    }
+
+    .Bali {
+        display: inline-block;
+        width: 30vw;
+        margin-top: 25vh;
+        margin-left: 97vh;
+        float: left;
+    }
+
+    .family {
+        display: inline-block;
+        float: left;
+        margin-left: -65vw;
+        margin-top: 35vh;
+        width: 15vw;
+    }
+
+    .hello {
+        float:left;s
+        display: inline-block;
+        width: 20vw;
+        margin-top: -15vh;
+        margin-left: 3vw;
+    }
+
+    .pooh {
+        float:left;
+        display: inline;
+        width: 15vw;
+        margin-top: -10vh;
+        margin-left: -10vw;
+    }
+
+    .buddie {
+        float: left;
+        display: inline;
+        width: 30vw;
+        margin-top: -10vh;
+        margin-left: 10vw;
+        transition: 0.5s;
+
+    }
+
+    .buddie:hover {
+        width: 35vw;
+        cursor: url('cursor2.png'), auto;
+    }
+
+    .polarbear{
+        float: left;
+        display: inline-block;
+        width: 30vw;
+        margin-top: -5vh;
+        margin-left: 60vw;
+    }
+
+    .shopbear{
+        float: left;
+        display: inline-block;
+        width: 40vw;
+        margin-top: -4vh;
+        margin-left: -80vw;
+    }
+
+    .lordofthering{
+        float: left;
+        display: inline-block;
+        width: 10vw;
+        margin-top: 30vh;
+        margin-left: -80vw;
+    }
+
+    .caged-2 {
+        background-image: url("caged.jpg");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        float: left;
+        display: inline-block;
+        width: 470px;
+        height: 200px;
+        margin-top: 5vh;
+        margin-left: 55vw;
+        font-family: 'Archivo Narrow', sans-serif;
+        font-stretch: condensed;
+        transform:scale(1,2.5) translateY(6vh); 
+        letter-spacing: -5px;
+        font-size: 5vh;
+        z-index: -0;
+        padding: 0.5%;
+    }
+
+    .caged {
+        background-color: red;
+        float: left;
+        display: inline-block;
+        position: relative;
+        width: 470px;
+        height: 200px;
+        margin-top: 5vh;
+        margin-left: 55vw;
+        font-family: 'Archivo Narrow', sans-serif;
+        font-stretch: condensed;
+        transform:scale(1,2.5) translateY(6vh); 
+        letter-spacing: -5px;
+        font-size: 5vh;
+        z-index: -0;
+        padding: 0.5%;
+        text-decoration: underline;
+    }
+
+    a {
+        color: black;
+    }
+
+    a:hover {
+        cursor: url('cursor2.gif'), auto;
+
+    }
+
+    .lotso{
+        float: left;
+        display: inline-block;
+        width: 10vw;
+        margin-top: 30vh;
+        margin-left: -80vw;
+    }
+    .wild{
+        float: left;
+        display: inline-block;
+        width: 30vw;
+        margin-top: 30vh;
+        margin-left: -60vw;
+        margin-bottom: 50vh;
+    }
+
+    /*.question {
+
+        position: fixed;
+        display:inline-block;
+        float: left;
+        margin-top: 30vh;
+        transition: height .5s ease-out 1s; 
+    }
+
+    .question:hover {
+        transition: 2s;
+        cursor: url('cursor2.png'), auto;
+        width: 25vw;
+        transition: height .5s ease-out 1s; 
+
+
+    }*/
+
+
+    
+    .question {
+        display: inline-block;
+        float: left;
+        width: 8vw;
+    }
+
+    .animal {
+        margin-top: -20vh;
+    }
+
+    .cell {
+        display:inline-block;
+        position:fixed;
+        width: 50%;
+        margin-top: -300%;
+    }
+
+    .cell-animation {
+        animation: closing 4s linear ;
+    }
+
+    @keyframes closing {
+        from { transform: translateY(50%); }
+        to { transform: translateY(100%); }
+    }
+
+    .qbox {
+        width: 8vw;
+        transition: 0.3s;
+    }
+
+    .qbox:hover {
+        width: 10vw;
+        cursor: url('cursor2.png') auto;
+        )
+
+    }
+
+    
+
+</style>
+
+<script>
+
+
+    const textbox = document.getElementById("imgbox");
+
+    function handleMouseEnter() {
+        textbox.classList.remove("caged-2");
+        textbox.classList.add("caged");
+        textbox.innerText="The ultimate sacrifice: Mother bear kills her cub and then herself to save her from a life of torture"
+
+    }
+    function handleMouseOut() {
+        textbox.classList.remove("caged");
+        textbox.classList.add("caged-2");
+        textbox.innerText="";
+
+    }
+
+
+
+    textbox.addEventListener("mouseover", handleMouseEnter);
+    textbox.addEventListener("mouseout", handleMouseOut);
+
+
+
+    const qbox = document.getElementById("qbox");
+    const cell = document.getElementById("cell");
+
+    function handleQbox () {
+        cell.classList.add("cell-animation");
+        console.log("WTF")
+    }
+
+
+
+
+    qbox.addEventListener("click", handleQbox);
+
+
+
+
+
+</script>

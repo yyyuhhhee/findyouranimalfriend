@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="marquee">
+        <div id="track" class="track"><div id="content" class="content">
+        <span id="marquee" class="inner">✨Find your animal friend and move forward✨</span>
+        <span id="marquee2" class="inner">✨Find your animal friend and move forward✨</span>
+        <span id="marquee3" class="inner">✨Find your animal friend and move forward✨</span>
+        <span id="marquee4" class="inner">✨Find your animal friend and move forward✨</span>
+        <span id="marquee5" class="inner">✨Find your animal friend and move forward✨</span>
+    </div></div></div>
+    
+    <img id="blink" class="blink" src="eyelash.gif">
+
+    <img id="qbox" class="qbox" src="output-onlinegiftools.gif">
+    <a href="https://www.hsi.org/news-media/blinded_rabbits/"><img id="letter" class="letter" src="loveletter.png"></a>
+    <a href="index.html"><img id="left" class="left" src="left.png"></a>
+
+    <div id="eye" class="flex">
+        <div class="eye1"><img class="eye" src="eye01 copy.png"></div>
+        <div class="eye1"><img class="eye" src="eye02 copy.png"></div>
+    </div>
+
+    <div id="clicked" class="hidden">
+        <div class="eye1"><img id="lash" class="eye" src="eye02-lashed.png"></div>
+        <div class="eye1"><img id="lash" class="eye" src="eye01-lashed.png"></div>
+    </div>
+
+    <div class="flex2">
+        <div class="nose"><img id="nose" class="nose1" src="nose.png"></div>
+    </div>
+    <div class="flex3">
+        <div class="mouth"><img id="mouth" class="mouth1" src="mouth.png"></div>
+    </div>
+
+    <div id="bunny" class="hopping">
+        <div class="bunny"><img class="bunny1" src="rabbitbody.png"></div>
+        <div class="bunny"><img class="bunny2" src="rabbitbody.png"></div>
+        <div class="bunny"><img class="bunny3" src="rabbitbody.png"></div>
+        <div class="bunny"><img class="bunny4" src="rabbitbody.png"></div>
+        </div>
+
+    
+
+
+</body>
+</html>
+
+
+<style>
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+    body {
+        background-image: url('meadow.jpeg');
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        cursor: url('cursor-mascara copy.png') 2 2, grab;
+        overflow: hidden;
+        
+    }
+
+    .content {
+        letter-spacing: -5px;
+        transform:scale(1,2.5) translateY(6vh); 
+        margin-left: 0;
+        margin-top: 0;
+        background-color: white;
+        height: 24vh;
+        font-family: 'Archivo Narrow', sans-serif;
+        font-stretch: condensed;
+        font-size: 13vh;
+    }
+
+
+    .marquee {
+        position: relative;
+        width: 100vw;
+        max-width: 100%;
+        height: 23vh;
+        margin-top: 0;
+        overflow-x: hidden; 
+    }
+
+    .inner {
+        margin-left: 20vw;
+    }
+
+    .track {
+        position: absolute;
+        white-space: nowrap;
+        will-change: transform;
+        animation: marquee 37s linear infinite;
+    }
+
+    @keyframes marquee {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+    }
+
+    .shine {
+        animation: shine 0.2s linear infinite;
+        margin-left: -13vw;
+    }
+
+    @keyframes shine {
+        from { color: red; }
+        to { color: white; }
+    }
+
+    
+
+    .flex {
+        margin-top: 5vh;
+        width: 25vw;
+        height: 18vh;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+
+    .flex-clicked {
+        display: flex;
+        margin-top: 5vh;
+        width: 30vw;
+        height: 18vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .hidden :hover {
+        width: 30vw;
+    }
+
+    .flex :hover {
+        width: 30vw;
+    }
+
+    .eye :hover{
+        width: 30vw;
+    }
+
+    .flex2 {
+        width: 30vw;
+        height: 30vh;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .flex3 {
+        width: 30vw;
+        height: 30vh;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+    
+    }
+
+
+    .eye {
+        margin-top: 10vh;
+        width: 15vw;
+        padding: 10vw;
+        transition: 0.3s;
+        cursor: url('cursor-mascara copy2.png') 2 2, grab;
+    }
+
+    .eye:hover {
+        width: 17vw;
+    }
+
+
+
+    .nose1 {
+        width: 19vw;
+
+    }
+
+    .mouth1 {
+        width: 16vw;
+
+    }
+
+    .hopping {
+        z-index: 10;
+    }
+
+    .bunny {
+        top: 0;
+        left: 0;
+        display: inline-block;
+        animation-name: pop;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        padding: 7vw;
+
+    }
+
+    @keyframes pop {
+        0% {transform: translateY(0vh);}
+        40% {transform: translateY(0vh);}
+        50% {transform: translateY(-5vh);}
+        80% {transform: translateY(0vh);}
+        100% {transform: translateY(0vh);}
+    }
+
+    .hopping {
+        position: fixed;
+        margin-top: -45vh;
+    }
+
+    .blink {
+        display: none;
+        width: 40vw;
+        z-index: 7;
+        position: fixed;
+        margin-top: 10vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .qbox {
+        width: 8vw;
+        display: inline-block;
+        position: fixed;
+        margin-left: 6vw;
+        margin-top: 7vh;
+        transition: 0.2s;
+        cursor: url('cursor-lash.png') 2 2, grab;
+    }
+
+    .qbox:hover {
+        width: 10vw;
+    }
+
+    @keyframes purpletoblack {
+        0% {background-color: purple;}
+        50% {background-color: black;}
+        100% {background-color: purple;}
+
+    }
+
+    .letter {
+        width: 8vw;
+        margin-left: 85vw;
+        margin-top: 8vh;
+        display: inline-block;
+        position: fixed;
+        transition: 0.2s;
+        cursor: url('cursor-lash.png') 2 2, grab;
+    }
+
+    .letter:hover {
+        width: 10vw;
+        cursor: url('cursor-lash.png') auto;
+    }
+
+    .left {
+        display: inline-block;
+        position: fixed;
+        width: 8vw;
+        margin-left: 85vw;
+        margin-top: 20vh;
+        transition: 0.2s;
+        cursor: url('cursor-lash.png') 2 2, grab;
+    }
+
+    .left:hover {
+        width: 10vw;
+    }
+
+    
+
+
+
+</style>
+
+<script>
+
+    const eye = document.getElementById("eye");
+    const clicked = document.getElementById("clicked");
+    const unclicked = document.getElementById("unlicked");
+    const lash = document.getElementById("lash");
+    const blink = document.getElementById("blink");
+    const qbox = document.getElementById("qbox");
+    const back = document.querySelector("body");
+    const nose = document.getElementById("nose");
+    const mouth = document.getElementById("mouth");
+
+    const span1 = document.getElementById("marquee");
+    const span2 = document.getElementById("marquee2");
+    const span3 = document.getElementById("marquee3");
+    const span4 = document.getElementById("marquee4");
+    const span5 = document.getElementById("marquee5");
+    const span6 = document.getElementById("marquee6");
+    const track = document.getElementById("track");
+    const content = document.getElementById("content");
+    const bunny = document.getElementById("bunny");
+
+    const letter = document.getElementById("letter");
+    
+
+
+    
+
+    function hey() {
+        console.log("heu");
+        eye.classList.add("hidden");
+        eye.classList.remove("flex");
+        clicked.classList.remove("hidden");
+        clicked.classList.add("flex");
+        
+    }
+
+    function heyout() {
+        clicked.classList.add("hidden");
+        clicked.classList.remove("flex");
+        eye.classList.remove("hidden");
+        eye.classList.add("flex");
+    }
+
+    function handleClick() {
+        back.style.transition = "2s";
+        blink.style.display = "inline-block";
+        back.style.backgroundColor = "purple";
+        back.style.backgroundImage = "none";
+        eye.style.opacity = "30%";
+        lash.style.opacity = "30%";
+        back.style.cursor = "url('cursor-lash.png');"
+        clicked.style.opacity = "0%";
+        nose.style.opacity = "50%";
+        mouth.style.opacity = "50%";
+        span1.innerText = "But Can you curl your eyelash without hurting your friend?"
+        span2.innerText = "But Can you curl your eyelash without hurting your friend?"
+        span3.innerText = "But Can you curl your eyelash without hurting your friend?"
+        span4.innerText = "But Can you curl your eyelash without hurting your friend?"
+        span5.innerText = "But Can you curl your eyelash without hurting your friend?"
+        content.style.backgroundColor = "purple";
+        track.style.webkitAnimationDuration = "50s";
+        track.style.webkitFilter = "blur(8px)"
+        back.style.animationName = "purpletoblack";
+        back.style.animationDuration = "6s";
+        back.style.animationIterationCount = "infinite";
+        letter.style.opacity = "50%";
+        left.style.opacity = "50%";
+        
+
+        letter.addEventListener("mouseover", handleBlur);
+        letter.addEventListener("mouseleave", handleBlurOut);
+
+    
+        
+    }
+
+
+    function handleBlur () {
+        track.style.webkitFilter = "blur(0px)"
+    }
+
+    function handleBlurOut () {
+        track.style.webkitFilter = "blur(8px)"
+    }
+
+    
+
+    
+
+
+    eye.addEventListener("mouseenter", hey);
+    eye.addEventListener("mouseleave", heyout);
+    qbox.addEventListener("click", handleClick);
+
+
+</script>
