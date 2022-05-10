@@ -45,7 +45,7 @@ table {
 
 
 body {
-    cursor: url('cursor.png'), auto;
+    cursor: url('cursorthinking.png'), auto;
     background-image: url("sky.jpeg");
     background-size: cover;
     background-position: center;
@@ -91,7 +91,7 @@ body {
 
 .yellow2:hover {
     width: 10%;
-    cursor: url('cursor2.png'), auto;
+    cursor: url('starcursor.png'), auto;
 
 }
 
@@ -106,7 +106,7 @@ body {
 
 .yellow3:hover {
     width: 9%;
-    cursor: url('cursor2.png'), auto;
+    cursor: url('starcursor.png'), auto;
 }
 
 #blue {
@@ -120,7 +120,7 @@ body {
 
 #blue:hover {
     width: 10%;
-    cursor: url('cursor2.png'), auto;
+    cursor: url('starcursor.png'), auto;
 }
 
 
@@ -135,7 +135,7 @@ body {
 
 .blue2:hover {
     width: 10%;
-    cursor: url('cursor2.png'), auto;
+    cursor: url('starcursor.png'), auto;
 }
 
 .position  {
@@ -148,9 +148,8 @@ body {
 }
 
 .position:hover {
-    
     width: 10%;
-    cursor: url('cursor2.png'), auto;
+    cursor: url('starcursor.png'), auto;
 }
 
 
@@ -348,7 +347,7 @@ body {
 }
 
 a:hover {
-    cursor: url('cursor2.png'), auto;
+    cursor: url('starcursor.png'), auto;
 }
 
 
@@ -400,7 +399,7 @@ a:hover {
 
     .qbox:hover {
         width: 10%;
-        cursor: url('cursor2.png'), auto;
+        cursor: url('starcursor.png'), auto;
     }
 
     
